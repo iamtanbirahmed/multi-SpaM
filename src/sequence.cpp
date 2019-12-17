@@ -35,6 +35,8 @@ std::vector<Sequence> Sequence::read( std::string & file_name, bool verbose )
     {
         std::getline( infile, header );
         std::getline( infile, line, '>' );
+        std::cout<<std::endl;
+        std::cout << header<<std::endl;
         sequences.emplace_back( header, line );
         if ( verbose )
             std::cout << sequences.back().id << ": " << sequences.back().content.size() << " residues." << std::endl;
